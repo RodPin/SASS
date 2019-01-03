@@ -1,3 +1,5 @@
+//DEFININDO VARIAVEIS
+
 $colors: (
   primary: brown,
   accent: white,
@@ -6,17 +8,24 @@ $colors: (
 );
 $padding: 15px;
 $borders: 15px;
+$desktop: 840px;
+
+
+//DEFININDO FUNCOES
+
 @function color($color-name) {
   @return map-get($colors, $color-name);
 }
 
-$desktop: 840px;
-
+//Funcao para quando abre a tela toda..
 @mixin desktop {
   @media (min-width: #{$desktop}) {
     @content;
   }
 }
+
+
+//CSS com sass
 body,
 html {
   height: 100%;
